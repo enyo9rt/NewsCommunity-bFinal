@@ -1,18 +1,51 @@
-# NewsCommunity-bFinal
+# 💚 할머니는 다 들어주셔
+> 스포츠 뉴스 커뮤니티<br/>
 
+</br>
 
-[Devlope Status: In progress ..]
-배포 url: Newscommunitybackfinal-env.eba-fq3yepez.ap-northeast-2.elasticbeanstalk.com
+## 1. 제작 기간 & 참여 인원
+- 2022년 6월 24일 ~ 7월 29일
+- 4인 팀 프로젝트
 
+</br>
 
-[그림1. 목표 아키텍처 (-Spring Cloud 도입으로 변형될 수 있음)]
-<img width="1143" alt="67868586" src="https://user-images.githubusercontent.com/68278903/176354054-63cb5335-eff4-4782-8bb8-48ce35e2d11a.PNG">
+## 2. 사용 기술
+#### `Back-end`
+  - Java 11
+  - Spring Boot 2.7.2
+  - Gradle 7.4.1
+  - Spring Data JPA
+  - MySQL 8.0.28
+  - Spring Security
+#### `Front-end`
+  - HTML5
+  - CSS3
+  - Javascript
+  - Bulma
+  - BootStrap
+  - JQuery
 
+</br>
 
-[그림2. 현재 아키텍처 (도커 미도입, S53 미사용)]
-<img width="699" alt="45643636" src="https://user-images.githubusercontent.com/68278903/176354317-0f85c33d-8c12-478d-b05e-7c81c9e3e06a.PNG">
+## 3. 서비스 소개
+네이버의 스포츠 뉴스를 스크래핑하여 클로바 요약 API로 각 뉴스를 요약해 보여줍니다.<br/>
+회원들이 뉴스에 대한 의견을 댓글로 나눌 수 있고, 마음에 드는 뉴스를 북마크하거나 다른 회원의 댓글과 북마크를 모아볼 수 있습니다.<br/><br/>
+[상세 정보 보기](https://github.com/2022-Harmony/NewsCommunity-bFinal)
 
+</br>
 
+## 4. ERD 설계
+![](https://user-images.githubusercontent.com/96354426/181658487-2947bde3-6809-4a9b-9e25-b1467369ca15.png)
 
-[그림3. 배포 url을 이용한 api 테스트 예시]
-<img width="607" alt="546473745" src="https://user-images.githubusercontent.com/68278903/176353878-d693c819-f796-4804-a791-92290e50f665.PNG">
+</br>
+
+## 5. 담당 기능
+인증, 인가와 더불어 회원과 관련된 전반적인 기능을 담당했습니다.
+
+</br>
+
+## 6. 트러블 슈팅
+
+</br>
+
+## 7. 회고 / 느낀점
