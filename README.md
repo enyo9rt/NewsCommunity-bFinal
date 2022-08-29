@@ -110,12 +110,12 @@ https://github.com/enyo9rt/NewsCommunity-bFinal/blob/e0e14bc37ba7ada45f6e423c7c6
 
 ### 6.1 핵심 트러블 슈팅
 
-- [UserDetails가 null을 반환하는 문제](https://github.com/2022-Harmony/NewsCommunity-bFinal/issues/11)<br/>
+- 로그인 사용자의 정보 가져오기 실패<br/>[UserDetails가 null을 반환하는 문제](https://github.com/2022-Harmony/NewsCommunity-bFinal/issues/11)<br/>
 댓글 등 다른 기능에서 사용자의 정보가 필요하여 @AuthenticationPrincipal 어노테이션을 사용하여 SecurityContext의 UserDetails 객체를 가져오려고 했습니다.<br/>
 Authentication 객체의 Principal을 가져오는 과정에서 기존에는 username 자체, 즉 String을 넣었기 때문에 null이 반환되었습니다.<br/>
 이를 UsernamePasswordAuthenticationToken 객체를 생성할 때 UserDetails를 구현한 User 객체를 넣어줌으로써 [해결](https://github.com/2022-Harmony/NewsCommunity-bFinal/commit/27de9174ca21834508c7cb8d6dc3c844f03f6138)하였습니다.
 
-- [비로그인 사용자의 경우 principal이 null을 반환하여 오류 발생하는 문제](https://github.com/2022-Harmony/NewsCommunity-bFinal/issues/157)<br/>
+- 비로그인 사용자 서비스 원활히 이용 불가<br/>[비로그인 사용자의 경우 principal이 null을 반환하여 오류 발생하는 문제](https://github.com/2022-Harmony/NewsCommunity-bFinal/issues/157)<br/>
 이 서비스의 경우, 비로그인 사용자도 조회 기능을 제한 없이 이용할 수 있도록 하고자 했습니다.<br/>
 그러나 @AuthenticationPrincipal 어노테이션을 사용하여 사용자의 정보를 필요로 하는 조회 API의 경우 anonymousUser 문자열을 반환하게 되어 오류가 발생했습니다.<br/>
 이를 해당 어노테이션을 커스텀하여 비로그인 사용자의 경우 null을 반환하도록 함으로써 [해결](https://github.com/2022-Harmony/NewsCommunity-bFinal/pull/158/commits/fede50d9a79ac2c41067b3a399ffd94a9cf04d0f)하였습니다.
@@ -124,6 +124,25 @@ Authentication 객체의 Principal을 가져오는 과정에서 기존에는 use
 
 ### 6.2 그 외 트러블 슈팅
 
+<details>
+<summary><b>회원 ID 중복 조회 불가</b></summary>
+<div markdown="1">
+  
+  - 중복 조회 url이 SecurityConfig 내 permitAll() 누락되어 추가하여 [해결](https://github.com/2022-Harmony/NewsCommunity-bFinal/pull/164/commits/385d2d8f48efeef03ddee1acf93eb5b0ab9512bc)
+  
+</div>
+</details>
+
+<details>
+<summary><b>필터 예외 처리 방식</b></summary>
+<div markdown="1">
+  
+  - 컨트롤러와 통일되지 않아 ExceptionHandlerFilter 클래스 생성, 커스텀 예외를 발생시켜 [해결](https://github.com/2022-Harmony/NewsCommunity-bFinal/pull/241)
+  
+</div>
+</details>
+
 <br/>
 
 ## 7. 회고 / 느낀점
+[최종 프로젝트 회고](https://enyo9rt.notion.site/2a998f14fa654b89962a366b86e74473)
