@@ -29,9 +29,12 @@
 
 ## 3. 서비스 소개
 네이버의 스포츠 뉴스를 스크래핑하여 클로바 요약 API로 각 뉴스를 요약해 보여줍니다.<br/>
-회원들이 뉴스에 대한 의견을 댓글로 나눌 수 있고, 마음에 드는 뉴스를 북마크하거나 다른 회원의 댓글과 북마크를 모아볼 수 있습니다.<br/><br/>
-[상세 정보 보기](https://github.com/2022-Harmony/NewsCommunity-bFinal)
+회원들이 뉴스에 대한 의견을 댓글로 나눌 수 있습니다.<br/>
+마음에 드는 뉴스를 북마크하거나 다른 회원의 댓글과 북마크를 모아볼 수 있습니다.<br/><br/>
+[상세 정보 보기](https://github.com/2022-Harmony/NewsCommunity-bFinal)<br/>
 [API 명세서 보기](https://github.com/2022-Harmony/NewsCommunity-bFinal/wiki/API-%EB%AA%85%EC%84%B8%EC%84%9C#)
+
+https://user-images.githubusercontent.com/101458083/188725418-1b6b58cc-1f80-4ebc-b1c9-a8d90805272e.mp4
 
 <br/>
 
@@ -138,6 +141,15 @@ Authentication 객체의 Principal을 가져오는 과정에서 기존에는 use
 <div markdown="1">
   
   - 컨트롤러와 통일되지 않아 ExceptionHandlerFilter 클래스 생성, 커스텀 예외를 발생시켜 [해결](https://github.com/2022-Harmony/NewsCommunity-bFinal/pull/241)
+  
+</div>
+</details>
+
+<details>
+<summary><b>간헐적으로 로그인, 로그아웃이 제대로 이루어지지 않는 문제</b></summary>
+<div markdown="1">
+  
+  - AJAX에 async 옵션을 주어 동기식 처리로 해결
   
 </div>
 </details>
